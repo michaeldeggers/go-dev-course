@@ -29,7 +29,7 @@ func TestSaveToFileAndNewDeckFromFile(t *testing.T) {
 	_ = d.saveToFile("_decktesting")
 
 	ld := newDeckFromFile("_decktesting")
-	if len(ld) != 51 {
+	if len(ld) != 52 {
 		t.Errorf("Expected deck of length 52, got %v", len(ld))
 	}
 
