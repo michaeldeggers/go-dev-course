@@ -14,6 +14,7 @@ import (
 type deck []string
 
 // new deck returns a deck with string types, rather than an empty deck of type string
+// TODO: Refactor to use struct with suit, value fields
 func newDeck() deck {
 	cards := deck{}
 	cardSuits := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
