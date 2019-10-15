@@ -5,21 +5,17 @@ import (
 )
 
 func main() {
-	//var colors map[string]string
-
-	colors := make(map[string]string)
-
-	// key must be appropriate type when setting and referencing
-	colors["white"] = "#ffffff"
-	colors["black"] = "#000"
-
 	// map[<key type>]<value type>
-	//colors := map[string]string{
-	//	"red": "#ff0000",
-	//	"green": "#4bf745",
-	//}
+	colors := map[string]string{
+		"red":   "#ff0000",
+		"green": "#4bf745",
+	}
 
-	delete(colors, "white")
+	printMap(colors)
+}
 
-	fmt.Println(colors)
+func printMap(c map[string]string) {
+	for color, hex := range c {
+		fmt.Println(color, hex)
+	}
 }
