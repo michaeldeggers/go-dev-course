@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 // interfaces used to define a function set
-type bot interface {
+type bot interface { // interface type - can't create values out of this
 	getGreeting() string
 }
 
 // these automatically become members of bot interface
-type englishBot struct{}
-type spanishBot struct{}
+type englishBot struct{} // concrete type
+type spanishBot struct{} // concrete type
 
 func main() {
 	eb := englishBot{}
