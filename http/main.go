@@ -13,5 +13,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(resp.Body)
+	// read function will read info into the byte slice, but cannot resize it
+	bs := make([]byte, 99999)
+	resp.Body.Read(bs)
+	fmt.Println(string(bs))
 }
