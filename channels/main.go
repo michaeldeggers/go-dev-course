@@ -22,10 +22,10 @@ func main() {
 	}
 
 	for l := range c {
-		go func() {
+		go func(link string) {
 			time.Sleep(5 * time.Second)
-			checkLink(l, c)
-		}() // extra parenthesis invoke function literal similar to js
+			checkLink(link, c)
+		}(l) // extra parenthesis invoke function literal similar to js
 	}
 }
 
